@@ -92,10 +92,11 @@ WSGI_APPLICATION = "Electricity_Billing_API.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+dburl = config("DATABASE_URL")
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config("HOST")
-    )}
+    'default': dj_database_url.config(default=dburl)
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
