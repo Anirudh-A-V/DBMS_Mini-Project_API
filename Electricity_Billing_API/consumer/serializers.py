@@ -22,4 +22,3 @@ class ComplaintSerializer(serializers.ModelSerializer):
         model = Complaint
         fields = "__all__"
 
-        
